@@ -9,6 +9,11 @@ import screenmatch.calculos.Classificavel;
 
 public class Series extends Titulos implements Classificavel{
     
+    public Series(String titulo) {
+        
+        super(titulo);
+    }
+
     private int temporadas;
     private boolean finalizado;
     private int episodiosPorTemporada;

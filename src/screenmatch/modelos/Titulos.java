@@ -7,7 +7,11 @@ package screenmatch.modelos;
  *  O outro método retornará um valor double como a média das notas do filme/série.
  */
 
-public class Titulos {
+public class Titulos implements Comparable<Titulos>{
+
+    public Titulos(String titulo) {
+        setTitulo(titulo);
+    }
     
     private String titulo;
     private int anoDeLancamento;
@@ -43,5 +47,17 @@ public class Titulos {
 
     public int getDuracaoEmMinutos() {
         return anoDeLancamento;
+    }
+
+    @Override
+    public String toString() {
+        
+        return "Nome do título: " + getTitulo() + "(" + getAnoDeLancamento() + ")";
+    }
+
+    @Override
+    public int compareTo(Titulos o) {
+    
+        return getTitulo().compareTo(o.getTitulo());
     }
 }

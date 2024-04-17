@@ -8,6 +8,11 @@ import screenmatch.calculos.Classificavel;
  */
 public class Filmes extends Titulos implements Classificavel{
 
+    public Filmes(String titulo) {
+        
+        super(titulo);
+    }
+
     private String diretor;
     private int duracaoEmMinutos;
 
